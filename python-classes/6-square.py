@@ -14,40 +14,21 @@ class Square:
 
     @property
     def size(self):
-        """returns size."""
+        """Returns size."""
         return self.__size
 
     @size.setter
     def size(self, size):
-        """size to a size."""
+        """Sets size to a size."""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-    def __init__(self, size=0, position=(0, 0)):
-        """Initializes the data."""
-        self.size = size
-        self.position = position
-
-    @property
-    def size(self):
-        """Retrieves the size."""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Sets the size to a value."""
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
-
     @property
     def position(self):
-        """Retrieves the position."""
+        """Returns the position."""
         return self.__position
 
     @position.setter
@@ -66,7 +47,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """prints in stdout the square with the character #."""
+        """Prints in stdout the square with the character #."""
         if self.__size == 0:
             print()
         else:
@@ -78,4 +59,3 @@ class Square:
                 for o in range(self.__size):
                     print("#", end="")
                 print()
-
