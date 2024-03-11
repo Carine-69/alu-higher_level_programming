@@ -5,11 +5,10 @@ Defines a Rectangle class.
 
 
 class Rectangle:
-    """Rectangle class body """
+    """Rectangle class body"""
 
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle width and height.
-        """
+        """Initializes a Rectangle with width and height."""
         self.width = width
         self.height = height
 
@@ -20,8 +19,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Sets the width of rectangle
-        """
+        """Sets the width of rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,10 +33,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Sets the height of a Rectangle instance
-        Args:
-            value: value of the height, must be a positive integer
-        """
+        """Sets the height of a Rectangle instance."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -46,17 +41,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Calculates the area of a Rectangle instance
-        Returns:
-            Area of the the rectangle, given by height * width
-        """
+        """Calculates the area of a Rectangle instance."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Calculates the perimeter of a Rectangle instance
-        Returns:
-            Perimeter of the rectangle, given by 2 * (height + width)
-        """
+        """Calculates the perimeter of a Rectangle instance."""
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
