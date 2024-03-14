@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 # class 'Rectangle' that inherits from 'BaseGeometry' (7-base_geometry.py)
 # (task based on 8-rectangle.py)
@@ -42,4 +41,3 @@ class Rectangle(BaseGeometry):
         string = "[" + str(self.__class__.__name__) + "] "
         string += str(self.__width) + "/" + str(self.__height)
         return string
-
