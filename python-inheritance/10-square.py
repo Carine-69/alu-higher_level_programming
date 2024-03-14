@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Inherits BaseGeometry class"""
 
@@ -25,4 +24,3 @@ class Square(Rectangle):
         """Area of Square"""
 
         return self.__size ** 2
-
